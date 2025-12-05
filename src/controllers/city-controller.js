@@ -64,11 +64,11 @@ const get = async (req, res) => {
 
 const update = async (req, res) => {
     try {
-        const response = await cityservice.getCity(req.params.id, req.body);
+        const response = await cityservice.updateCity(req.params.id, req.body);
         return res.status(200).json({
             data: response,
             success: true,
-            message: "Successfully fetched a city",
+            message: "Successfully updated a city",
             err: {},
         });
     } catch (error) {
